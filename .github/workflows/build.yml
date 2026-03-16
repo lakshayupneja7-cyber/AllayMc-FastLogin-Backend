@@ -1,4 +1,4 @@
-name: Build AllayMc LoginSecurity Backend
+name: Build AllayMc FastLogin Backend
 
 on:
   push:
@@ -24,10 +24,9 @@ jobs:
 
       - name: Build backend plugin
         run: mvn clean package
-        working-directory: allaymc-loginsecurity-backend
 
       - name: Upload backend jar
         uses: actions/upload-artifact@v4
         with:
-          name: allaymc-loginsecurity-backend-jar
-          path: allaymc-loginsecurity-backend/target/*.jar
+          name: allaymc-fastlogin-backend-jar
+          path: target/*.jar
